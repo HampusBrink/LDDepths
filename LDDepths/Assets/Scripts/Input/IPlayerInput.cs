@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Input
-{
+
     public interface IPlayerInput
     {
         void OnMove(Vector2 value)
@@ -47,4 +46,3 @@ namespace Input
         public static void Subscribe(this IPlayerInput input) => InputManager.Subscribe(input);
         public static void UnSubscribe(this IPlayerInput input) => InputManager.UnSubscribe(input);
     }
-}

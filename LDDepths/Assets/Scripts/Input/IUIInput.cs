@@ -1,7 +1,5 @@
 using UnityEngine.InputSystem;
 
-namespace Input
-{
     public interface IUIInput
     {
         public void OnNavigate(InputAction.CallbackContext context)
@@ -50,4 +48,3 @@ namespace Input
         public static void Subscribe(this IUIInput input) => InputManager.Subscribe(input);
         public static void UnSubscribe(this IUIInput input) => InputManager.UnSubscribe(input);
     }
-}

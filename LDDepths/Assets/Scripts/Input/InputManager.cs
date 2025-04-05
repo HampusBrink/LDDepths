@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Input
-{
+
     [CreateAssetMenu(menuName = "InputManager")]
     public class InputManager : ScriptableObject, InputActions.IPlayerActions, InputActions.IUIActions
     {
@@ -204,4 +203,3 @@ namespace Input
             }
         }
     }
-}

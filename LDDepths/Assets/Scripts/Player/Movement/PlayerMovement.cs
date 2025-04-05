@@ -1,18 +1,17 @@
-using Input;
 using UnityEngine;
 
 namespace Player
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody))]
     public class PlayerMovement : MonoBehaviour, IPlayerInput
     {
         [SerializeField] private float moveSpeed = 5f;
-        private Rigidbody2D _rb;
+        private Rigidbody _rb;
         private Vector2 _moveVector;
 
         private void Awake()
         {
-            _rb = GetComponent<Rigidbody2D>();
+            _rb = GetComponent<Rigidbody>();
         }
 
         private void OnEnable()
@@ -32,7 +31,8 @@ namespace Player
 
         private void FixedUpdate()
         {
-            _rb.linearVelocity = _moveVector.normalized * moveSpeed;
+            var moveVector = (transform.right * _moveVector.x + transform.forward * _moveVector.y).normalized;
+            _rb.linearVelocity = new Vector3(moveVector.x * moveSpeed,_rb.linearVelocity.y,moveVector.z * moveSpeed);
         }
     }
 }
