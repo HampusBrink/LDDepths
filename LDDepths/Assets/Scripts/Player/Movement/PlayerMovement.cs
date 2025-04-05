@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 namespace Player
@@ -26,6 +27,7 @@ namespace Player
 
         public void OnMove(Vector2 value)
         {
+            UnityEngine.Debug.Log(value);
             _moveVector = value;
         }
 
