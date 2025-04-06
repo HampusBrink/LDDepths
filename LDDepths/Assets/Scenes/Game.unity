@@ -3124,7 +3124,7 @@ PrefabInstance:
     - target: {fileID: 863804891098003957, guid: ae2bd033b4c39ce439c0e7ae601a8fdb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.23
+      value: 39.5
       objectReference: {fileID: 0}
     - target: {fileID: 863804891098003957, guid: ae2bd033b4c39ce439c0e7ae601a8fdb,
         type: 3}
@@ -3638,6 +3638,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 4547605769666951749, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 526749212}
+    - target: {fileID: 4547605769666951749, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
+      propertyPath: videoPlayer
+      value: 
+      objectReference: {fileID: 2078968185}
+    - target: {fileID: 4547605769666951749, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
+      propertyPath: deathBackground
+      value: 
+      objectReference: {fileID: 1428823316}
     - target: {fileID: 5267948944751164378, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
       propertyPath: managedReferences[3401684591417229521].m_Value
@@ -3760,13 +3775,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40456328
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40456328
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.40456328
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.51
       objectReference: {fileID: 0}
     - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 7457073403012281361, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
@@ -3814,15 +3844,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2911145034371939437, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2084067666}
-    - targetCorrespondingSourceObject: {fileID: 2911145034371939437, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
-        type: 3}
-      insertIndex: -1
+      insertIndex: 6
       addedObject: {fileID: 2084067674}
     - targetCorrespondingSourceObject: {fileID: 2911145034371939437, guid: 8d9823dd2c2d17d4d9b14e8679670dd3,
         type: 3}
-      insertIndex: -1
+      insertIndex: 7
       addedObject: {fileID: 2084067675}
   m_SourcePrefab: {fileID: 100100000, guid: 8d9823dd2c2d17d4d9b14e8679670dd3, type: 3}
 --- !u!1 &2084067665 stripped
@@ -3831,23 +3857,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2084067664}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2084067666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084067665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6446910247551b44a0b138e1fb91bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 2078968185}
-  deathBackground: {fileID: 1428823316}
-  deathText: {fileID: 526749212}
-  fadeDuration: 1
-  waitAfterFade: 3
 --- !u!135 &2084067674
 SphereCollider:
   m_ObjectHideFlags: 0
