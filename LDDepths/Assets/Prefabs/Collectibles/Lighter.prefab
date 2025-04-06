@@ -69,6 +69,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lighter
       objectReference: {fileID: 0}
+    - target: {fileID: 8179324095172597237, guid: bbdd3c52d2902414da391151fae6ae80,
+        type: 3}
+      propertyPath: collectibleType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

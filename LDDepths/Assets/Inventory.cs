@@ -7,6 +7,8 @@ public class Inventory : MonoBehaviour
     bool hasFuze = false;
     bool hasLighter = false;
     
+    public UIManager uiManager;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,10 +46,22 @@ public class Inventory : MonoBehaviour
                         break;
                 }
                 collectible.CollectibleCollect();
+                uiManager.UpdateUnlockUI(collectible.collectibleType);
             }
             else
             {
                 Debug.Log("Collectible doesn't have Component");
+            }
+        }
+        else if (other.CompareTag("Escape"))
+        {
+            if (hasDynamite && hasFuze && hasLighter)
+            {
+                Debug.Log("You escaped!");
+            }
+            else
+            {
+                Debug.Log("You don't have all the items to escape.");
             }
         }
     }
