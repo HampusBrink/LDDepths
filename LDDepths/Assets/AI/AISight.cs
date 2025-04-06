@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class AISight : MonoBehaviour
 {
+    [Header("Spawn Points")]
+    [SerializeField] private Transform[] patrolPoints;
     [SerializeField] private Transform target;
     [SerializeField] private float sightRange = 10f;
     [SerializeField] private float spawnRange = 10f;
@@ -12,6 +15,7 @@ public class AISight : MonoBehaviour
 
     private NavMeshAgent agent;
     private float timeSinceLastDetection = 0f;
+    private int _counter;
 
     void Start()
     {
@@ -64,9 +68,16 @@ public class AISight : MonoBehaviour
 
     void Patrol()
     {
+        if (Vector3.Distance(transform.position, target.position) > spawnRange)
+        {
+            Vector3 randomDirection = Random.onUnitSphere * spawnRange + transform.position;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(randomDirection, out hit, spawnRange, NavMesh.AllAreas);
+            agent.transform.position = hit.position;
+        }
         if (timeSinceLastDetection > detectionCooldown)
         {
-            Vector3 randomDirection = Random.insideUnitSphere * sightRange;
+            Vector3 randomDirection = Random.onUnitSphere * spawnRange;
             randomDirection += transform.position;
             NavMeshHit hit;
             NavMesh.SamplePosition(randomDirection, out hit, sightRange, NavMesh.AllAreas);
