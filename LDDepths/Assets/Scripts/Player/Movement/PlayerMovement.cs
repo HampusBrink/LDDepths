@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
@@ -75,9 +76,13 @@ namespace Player
         {
             this.UnSubscribe();
         }
-
+        public bool IsMoving()
+        {
+            return _moveVector.sqrMagnitude > 0.01f;
+        }
         public void OnMove(Vector2 value)
         {
+            UnityEngine.Debug.Log(value);
             _moveVector = value;
         }
 
