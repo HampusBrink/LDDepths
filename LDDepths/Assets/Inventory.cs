@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class Inventory : MonoBehaviour
         {
             if (hasDynamite && hasFuze && hasLighter)
             {
-                Debug.Log("You escaped!");
+                SceneManager.LoadScene("WinScene");
             }
             else
             {
