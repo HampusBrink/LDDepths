@@ -589,7 +589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scary horror game
+  m_text: Really Scary horror game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46744fd7391ffb942a144d9877726e8b, type: 2}
   m_sharedMaterial: {fileID: 3616663752807009160, guid: 46744fd7391ffb942a144d9877726e8b,
