@@ -1,10 +1,13 @@
+using System.Collections;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class MonsterAttack : MonoBehaviour
 {
     public VideoPlayer videoPlayer; // Assign in Inspector or via script
+    public Image deathBackground;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +18,14 @@ public class MonsterAttack : MonoBehaviour
             {
                 videoPlayer.Play();
             }
+        }
+    }
+    private IEnumerator DelayForGameOver()
+    {
+        yield return new WaitForSeconds(2);
+        //while (deathBackground.color.a<1)
+        {
+            //deathBackground.color = new color()
         }
     }
 }

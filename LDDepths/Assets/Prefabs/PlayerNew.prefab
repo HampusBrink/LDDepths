@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1678446833203727833}
   - component: {fileID: 7936177446517313783}
   - component: {fileID: 5292158067491117899}
+  - component: {fileID: 5149297106351440254}
   m_Layer: 6
   m_Name: PlayerNew
   m_TagString: Untagged
@@ -207,6 +208,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   body: {fileID: 3393621978369885499}
+--- !u!114 &5149297106351440254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373339598065882838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6960003896238cb4c98b0e5ddab78e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepClips:
+  - {fileID: 8300000, guid: 55065a08ee7eb8a49884224ea6f68428, type: 3}
+  - {fileID: 8300000, guid: 515c0caf44068a443916f849eef362b9, type: 3}
+  - {fileID: 8300000, guid: b0633ae563cdd1540a18db72f750648f, type: 3}
+  - {fileID: 8300000, guid: 0535b837bdf231a4888c696f10094382, type: 3}
+  - {fileID: 8300000, guid: e08eabbc096ad2f47aee73ef68895488, type: 3}
+  - {fileID: 8300000, guid: 52d3a04e6d4d6fa4184fbf227980e08e, type: 3}
+  - {fileID: 8300000, guid: 067934494e3bc914189fe98a961b0806, type: 3}
+  - {fileID: 8300000, guid: ffac5297a753243408f49cd11f25f1ea, type: 3}
+  - {fileID: 8300000, guid: 7e22fab145240f54f96e3a7a965a6886, type: 3}
+  - {fileID: 8300000, guid: cfc7284ca282bf34db60569f09a56e50, type: 3}
+  playerMovement: {fileID: 5292158067491117899}
+  stepInterval: 0.5
+  volume: 1
+  pitchVariance: 0.1
+  poolSize: 5
 --- !u!1 &6153968590166678944
 GameObject:
   m_ObjectHideFlags: 0
