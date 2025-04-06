@@ -5,6 +5,7 @@ public class AISight : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float sightRange = 10f;
+    [SerializeField] private float spawnRange = 10f;
     [SerializeField] private float fieldOfViewAngle = 90f;
     [SerializeField] private float detectionCooldown = 1f;
     [SerializeField] private float sightOffset = 1f;
@@ -81,6 +82,8 @@ public class AISight : MonoBehaviour
         Vector3 sightOrigin = transform.position - transform.forward * sightOffset;
 
         Gizmos.DrawWireSphere(sightOrigin, sightRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, spawnRange);
 
         Gizmos.color = Color.red;
         Vector3 leftBoundary = Quaternion.Euler(0, -fieldOfViewAngle / 2, 0) * transform.forward * sightRange;

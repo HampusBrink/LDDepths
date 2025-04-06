@@ -841,21 +841,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2740318527406632620, guid: a4c146a020a8f77439e4bdbf94d95a4b,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740318527406632620, guid: a4c146a020a8f77439e4bdbf94d95a4b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740318527406632620, guid: a4c146a020a8f77439e4bdbf94d95a4b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740318527406632620, guid: a4c146a020a8f77439e4bdbf94d95a4b,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.23
       objectReference: {fileID: 0}
@@ -904,11 +889,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3506746762235740146, guid: a4c146a020a8f77439e4bdbf94d95a4b,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6089878753682647021, guid: a4c146a020a8f77439e4bdbf94d95a4b,
         type: 3}
       propertyPath: m_Name
@@ -919,12 +899,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4c146a020a8f77439e4bdbf94d95a4b, type: 3}
---- !u!4 &1081034038 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2740318527406632620, guid: a4c146a020a8f77439e4bdbf94d95a4b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1081034037}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1179716433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,10 +1005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f4212070ae2ab4eb1035cf1ba4ec38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 1081034038}
-  lookSpeed: 0.1
-  cameraSpeed: 5
-  offset: {x: 0, y: 0, z: 0}
+  movement: {fileID: 0}
+  sens: 0
+  heightFromTopOfCol: 0.08
 --- !u!114 &1179716438
 MonoBehaviour:
   m_ObjectHideFlags: 0

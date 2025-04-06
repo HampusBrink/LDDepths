@@ -96,7 +96,7 @@ namespace Player
 
         private void Movement()
         {
-            _endVel = body.InverseTransformVector(_rb.velocity);
+            _endVel = body.InverseTransformVector(_rb.linearVelocity);
 
             if (canMove)
             {
@@ -125,7 +125,7 @@ namespace Player
                 Gravity();
             }
 
-            _rb.velocity = body.TransformVector(_endVel);
+            _rb.linearVelocity = body.TransformVector(_endVel);
         }
 
         private Vector3 Accelerate(Vector3 vel, float wishSpeed, float accel, Vector3 normal)
