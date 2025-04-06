@@ -1,21 +1,26 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
 
 public class AISight : MonoBehaviour
 {
-    [Header("Spawn Points")]
-    [SerializeField] private Transform[] patrolPoints;
+    [Header("Spawn Points")] [SerializeField]
+    private Transform[] patrolPoints;
+
     [SerializeField] private Transform target;
     [SerializeField] private float sightRange = 10f;
+    [SerializeField] private float loseSightRange = 20f;
     [SerializeField] private float spawnRange = 10f;
     [SerializeField] private float fieldOfViewAngle = 90f;
-    [SerializeField] private float detectionCooldown = 1f;
+    [SerializeField] private float detectionCooldown = 10f;
     [SerializeField] private float sightOffset = 1f;
 
     private NavMeshAgent agent;
     private float timeSinceLastDetection = 0f;
     private int _counter;
+    private bool hasAggro;
+    private Transform _previousPatrolPoint;
 
     void Start()
     {
@@ -28,9 +33,21 @@ public class AISight : MonoBehaviour
 
         if (IsTargetInSight())
         {
-            agent.SetDestination(target.position);
+            if (!agent.hasPath)
+            {
+                agent.SetDestination(target.position);
+                hasAggro = true;
+            }
         }
-        else
+
+        if (hasAggro)
+        {
+            if (Vector3.Distance(transform.position, target.position ) > loseSightRange)
+            {
+                hasAggro = false;
+            }
+        }
+        else if(!hasAggro)
         {
             Patrol();
         }
@@ -75,14 +92,28 @@ public class AISight : MonoBehaviour
             NavMesh.SamplePosition(randomDirection, out hit, spawnRange, NavMesh.AllAreas);
             agent.transform.position = hit.position;
         }
+
         if (timeSinceLastDetection > detectionCooldown)
         {
-            Vector3 randomDirection = Random.onUnitSphere * spawnRange;
-            randomDirection += transform.position;
-            NavMeshHit hit;
-            NavMesh.SamplePosition(randomDirection, out hit, sightRange, NavMesh.AllAreas);
-            agent.SetDestination(hit.position);
-            timeSinceLastDetection = 0f;
+            var pointClosestToPlayer = patrolPoints.FirstOrDefault();
+            foreach (var patrolPoint in patrolPoints)
+            {
+                if (Vector3.Distance(patrolPoint.position, target.transform.position) <
+                    Vector3.Distance(pointClosestToPlayer.position, target.transform.position))
+                {
+                    pointClosestToPlayer = patrolPoint;
+                }
+            }
+
+            if (_previousPatrolPoint == pointClosestToPlayer)
+            {
+                pointClosestToPlayer = patrolPoints[Random.Range(0, patrolPoints.Length)];
+            }
+            _previousPatrolPoint = pointClosestToPlayer;
+            agent.SetDestination(pointClosestToPlayer.position);
+            _counter++;
+            if (_counter == patrolPoints.Length) _counter = 0;
+            timeSinceLastDetection = 0;
         }
     }
 
