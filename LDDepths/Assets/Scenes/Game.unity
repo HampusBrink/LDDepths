@@ -776,7 +776,7 @@ PrefabInstance:
     - target: {fileID: 765980707511322814, guid: a9a1d583a50d82f4c898ecddb23eb8f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.67381
+      value: -50.5
       objectReference: {fileID: 0}
     - target: {fileID: 765980707511322814, guid: a9a1d583a50d82f4c898ecddb23eb8f0,
         type: 3}
@@ -786,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 765980707511322814, guid: a9a1d583a50d82f4c898ecddb23eb8f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.107435
+      value: 34.3
       objectReference: {fileID: 0}
     - target: {fileID: 765980707511322814, guid: a9a1d583a50d82f4c898ecddb23eb8f0,
         type: 3}
@@ -3582,7 +3582,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 6.45
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -3594,7 +3594,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -4049,7 +4049,7 @@ PrefabInstance:
     - target: {fileID: 568604065472830847, guid: dbf7848ce13df9443b7ee9d2dea65d98,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.909836
+      value: -65.3
       objectReference: {fileID: 0}
     - target: {fileID: 568604065472830847, guid: dbf7848ce13df9443b7ee9d2dea65d98,
         type: 3}
@@ -4059,7 +4059,7 @@ PrefabInstance:
     - target: {fileID: 568604065472830847, guid: dbf7848ce13df9443b7ee9d2dea65d98,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.852771
+      value: -47.9
       objectReference: {fileID: 0}
     - target: {fileID: 568604065472830847, guid: dbf7848ce13df9443b7ee9d2dea65d98,
         type: 3}
