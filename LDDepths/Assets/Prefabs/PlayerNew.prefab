@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cfc7284ca282bf34db60569f09a56e50, type: 3}
   playerMovement: {fileID: 5292158067491117899}
   stepInterval: 0.5
-  volume: 1
+  volume: 3
   pitchVariance: 0.1
   poolSize: 5
 --- !u!1 &6153968590166678944

@@ -122,7 +122,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2911145034371939437}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5000001
+  m_Radius: 0.2
   m_Speed: 5
   m_Acceleration: 10
   avoidancePriority: 50
@@ -208,6 +208,7 @@ MonoBehaviour:
   - {fileID: 0}
   target: {fileID: 0}
   sightRange: 20
+  loseSightRange: 20
   spawnRange: 70
   fieldOfViewAngle: 360
   detectionCooldown: 1
