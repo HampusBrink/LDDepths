@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.72, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -151,4 +151,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0c0a633f722394dad8d0e7a6404e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  moveSpeed: 10
+  acceleration: 2
+  airSpeed: 1
+  airAcceleration: 1
+  crouchSpeedMultiplier: 0.5
+  jumpForce: 5
+  unGroundDelay: 0.1
+  crouchSharpness: 20
+  playerStandHeight: 1.65
+  playerCrouchHeight: 1
+  crouchAirRatio: 0.5
+  smoothCrouch: 1
+  gravityScale: 9.82
+  canMove: 1
+  jumpCooldown: 0.3
+  friction: 0.6
+  maxStrafeSpeed: 30
+  maxGroundAngle: 35
+  maxVelocity: 50
+  walkableLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  body: {fileID: 0}
